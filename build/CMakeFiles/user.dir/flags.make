@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/miguel-oliveira/Documents/Projeto_Integrador/imgui -I/home/miguel-oliveira/Documents/Projeto_Integrador/imgui/backends
 
-CXX_FLAGS =  -g -Wall -pedantic -Wuninitialized -Werror -fsanitize=address -fsanitize=undefined -std=c++17 
+CXX_FLAGS =  -g -Wall -pedantic -Wuninitialized -Werror -fsanitize=address -fsanitize=undefined -std=gnu++17
 

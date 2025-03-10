@@ -1,2 +1,1 @@
-Miguel 32
-Pedro 0
+ 0

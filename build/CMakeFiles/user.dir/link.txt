@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -Wall -pedantic -Wuninitialized -Werror -fsanitize=address -fsanitize=undefined -std=c++17  CMakeFiles/user.dir/user.cpp.o CMakeFiles/user.dir/account.cpp.o CMakeFiles/user.dir/accounts_data.cpp.o -o user  -lm 

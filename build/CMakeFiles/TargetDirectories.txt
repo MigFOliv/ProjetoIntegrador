@@ -1,0 +1,4 @@
+/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles/user.dir
+/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles/transactions.dir
+/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles/edit_cache.dir
+/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles/rebuild_cache.dir

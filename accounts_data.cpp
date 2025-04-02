@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// definição correta da variável global
+// Definição da variável global
 unordered_map<string, Account> accounts;
 
 void salvarContas() {
@@ -17,7 +17,10 @@ void salvarContas() {
     }
 
     for (const auto& [nome, conta] : accounts) {
-        file << nome << " " << conta.getSaldo() << endl;
+        file << nome << " "
+             << conta.getSaldo() << " "
+             << conta.getTelemovel() << " "
+             << conta.getPassword() << "\n";
     }
 
     file.close();
@@ -30,11 +33,11 @@ void carregarContas() {
         return;
     }
 
-    string nome;
+    string nome, tel, pass;
     double saldo;
 
-    while (file >> nome >> saldo) {
-        Account conta(nome);
+    while (file >> nome >> saldo >> tel >> pass) {
+        Account conta(nome, tel, pass);
         conta.setSaldo(saldo);
         accounts[nome] = conta;
     }

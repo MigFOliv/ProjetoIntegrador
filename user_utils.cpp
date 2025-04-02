@@ -1,4 +1,3 @@
-
 #include "user_utils.h"  
 #include "account.h"
 #include <unordered_map>
@@ -9,10 +8,15 @@ extern unordered_map<string, Account> accounts;
 
 void salvarContas();
 
-void criarConta(const string& nome) {
+void criarConta(const string& nome, const string& telemovel, const string& password) {
     if (accounts.find(nome) != accounts.end()) return;
-    accounts[nome] = Account(nome);
+    accounts[nome] = Account(nome, telemovel, password);
     salvarContas();
+}
+
+bool autenticarConta(const string& nome, const string& password) {
+    if (accounts.find(nome) == accounts.end()) return false;
+    return accounts[nome].getPassword() == password;
 }
 
 void depositar(const string& nome, double valor) {

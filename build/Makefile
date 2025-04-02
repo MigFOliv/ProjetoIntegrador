@@ -345,6 +345,30 @@ imgui/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/imgui/imgui_widgets.cpp.s
 .PHONY : imgui/imgui_widgets.cpp.s
 
+layout.o: layout.cpp.o
+.PHONY : layout.o
+
+# target to build an object file
+layout.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/layout.cpp.o
+.PHONY : layout.cpp.o
+
+layout.i: layout.cpp.i
+.PHONY : layout.i
+
+# target to preprocess a source file
+layout.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/layout.cpp.i
+.PHONY : layout.cpp.i
+
+layout.s: layout.cpp.s
+.PHONY : layout.s
+
+# target to generate assembly for a file
+layout.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/layout.cpp.s
+.PHONY : layout.cpp.s
+
 transactions.o: transactions.cpp.o
 .PHONY : transactions.o
 
@@ -453,6 +477,9 @@ help:
 	@echo "... imgui/imgui_widgets.o"
 	@echo "... imgui/imgui_widgets.i"
 	@echo "... imgui/imgui_widgets.s"
+	@echo "... layout.o"
+	@echo "... layout.i"
+	@echo "... layout.s"
 	@echo "... transactions.o"
 	@echo "... transactions.i"
 	@echo "... transactions.s"

@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/user.dir/imgui/imgui_tables.cpp.o.d"
   "CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o"
   "CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o.d"
+  "CMakeFiles/user.dir/layout.cpp.o"
+  "CMakeFiles/user.dir/layout.cpp.o.d"
   "CMakeFiles/user.dir/transactions.cpp.o"
   "CMakeFiles/user.dir/transactions.cpp.o.d"
   "CMakeFiles/user.dir/user.cpp.o"

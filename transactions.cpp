@@ -28,3 +28,17 @@ void transferir(const string& remetente, const string& destinatario, double valo
         cout << "❌ Saldo insuficiente para transferência.\n";
     }
 }
+
+bool levantar(const string& nome, double valor) {
+    if (accounts.find(nome) == accounts.end()) {
+        cout << "❌ Conta não encontrada!\n";
+        return false;
+    }
+
+    if (accounts[nome].gastar(valor)) {
+        salvarContas();
+        return true;
+    }
+
+    return false;
+}

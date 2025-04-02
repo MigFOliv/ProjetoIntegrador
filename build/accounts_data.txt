@@ -1,6 +1,4 @@
-Ricky 0
-miguel 20
-a 0
-Miguel 20
-Marosca 20
-monstro 0
+Miguel 0 93478636 Nitroade
+Marosca 20 monstro 0
+a 0 Miguel 20
+Ricky 0 miguel 20

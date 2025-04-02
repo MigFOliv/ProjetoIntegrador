@@ -33,6 +33,7 @@ set(PROJECT_SOURCES
     account.cpp
     accounts_data.cpp
     transactions.cpp
+    layout.cpp
     ${IMGUI_SOURCES}
 )
 

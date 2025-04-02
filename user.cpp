@@ -27,7 +27,7 @@ int main() {
 
     if (!glfwInit()) return -1;
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Sistema Byte ", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Sistema Byte", nullptr, nullptr);
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
 
@@ -35,6 +35,26 @@ int main() {
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     ImGui::StyleColorsDark();
+
+    // Estilo customizado
+    ImGuiStyle& style = ImGui::GetStyle();
+    style.WindowRounding = 6.0f;
+    style.FrameRounding = 4.0f;
+    style.GrabRounding = 4.0f;
+    style.ScrollbarRounding = 6.0f;
+
+    ImVec4* colors = style.Colors;
+    colors[ImGuiCol_WindowBg]         = ImVec4(0.10f, 0.12f, 0.18f, 1.00f);
+    colors[ImGuiCol_Header]           = ImVec4(0.20f, 0.35f, 0.60f, 1.00f);
+    colors[ImGuiCol_HeaderHovered]    = ImVec4(0.30f, 0.50f, 0.90f, 1.00f);
+    colors[ImGuiCol_Button]           = ImVec4(0.25f, 0.45f, 0.75f, 1.00f);
+    colors[ImGuiCol_ButtonHovered]    = ImVec4(0.35f, 0.60f, 1.00f, 1.00f);
+    colors[ImGuiCol_ButtonActive]     = ImVec4(0.20f, 0.40f, 0.80f, 1.00f);
+    colors[ImGuiCol_FrameBg]          = ImVec4(0.16f, 0.20f, 0.30f, 1.00f);
+    colors[ImGuiCol_FrameBgHovered]   = ImVec4(0.20f, 0.30f, 0.50f, 1.00f);
+    colors[ImGuiCol_Text]             = ImVec4(0.90f, 0.93f, 0.95f, 1.00f);
+    colors[ImGuiCol_TitleBg]          = ImVec4(0.13f, 0.20f, 0.35f, 1.00f);
+    colors[ImGuiCol_TitleBgActive]    = ImVec4(0.18f, 0.30f, 0.50f, 1.00f);
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 130");
@@ -115,7 +135,7 @@ int main() {
 
             ImGui::Spacing();
 
-            if (ImGui::Button("↩Sair da Conta", ImVec2(250, 0))) {
+            if (ImGui::Button("Sair da Conta", ImVec2(250, 0))) {
                 conta_atual = "";
                 mensagem = "Conta encerrada.";
             }
@@ -155,3 +175,4 @@ int main() {
 
     return 0;
 }
+

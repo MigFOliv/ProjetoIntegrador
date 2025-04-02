@@ -1,5 +1,3 @@
+monstro 0
+Marosca 20
 miguel 20
-monstro de label 0
-monstgro de label 0
-Nigga 20
-monstro 20

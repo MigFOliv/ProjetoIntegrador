@@ -21,6 +21,12 @@ enum class AppState {
     MENU_CONTA
 };
 
+void BotaoCentralizado(const char* label, ImVec2 tamanho) {
+    float x = (ImGui::GetWindowSize().x - tamanho.x) * 0.5f;
+    ImGui::SetCursorPosX(x);
+    ImGui::Button(label, tamanho);
+}
+
 void layout(string& conta_atual, string& mensagem, double& valor,
             char (&nome)[128], char (&telemovel)[128], char (&password)[128],
             char (&destinatario)[128], double& valor_transferencia,
@@ -32,15 +38,18 @@ void layout(string& conta_atual, string& mensagem, double& valor,
     switch (estado_atual) {
     case AppState::INICIO:
         ImGui::Text("Bem-vindo ao ByteBank");
-        if (ImGui::Button("Criar Conta", ImVec2(200, 0))) {
+        BotaoCentralizado("Criar Conta", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             estado_atual = AppState::CRIAR_CONTA;
             mensagem.clear();
         }
-        if (ImGui::Button("Iniciar Sessao", ImVec2(200, 0))) {
+        BotaoCentralizado("Iniciar Sessao", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             estado_atual = AppState::LOGIN;
             mensagem.clear();
         }
-        if (ImGui::Button("Sair", ImVec2(200, 0))) {
+        BotaoCentralizado("Sair", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             exit(0);
         }
         break;
@@ -51,7 +60,8 @@ void layout(string& conta_atual, string& mensagem, double& valor,
         ImGui::InputText("Telemovel", telemovel, IM_ARRAYSIZE(telemovel));
         ImGui::InputText("Password", password, IM_ARRAYSIZE(password), ImGuiInputTextFlags_Password);
 
-        if (ImGui::Button("Confirmar Criacao", ImVec2(200, 0))) {
+        BotaoCentralizado("Confirmar Criacao", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             if (string(nome).empty() || string(telemovel).empty() || string(password).empty()) {
                 mensagem = "Preencha todos os campos.";
             } else if (accounts.find(nome) != accounts.end()) {
@@ -63,8 +73,8 @@ void layout(string& conta_atual, string& mensagem, double& valor,
                 mensagem = "Conta criada com sucesso!";
             }
         }
-        ImGui::SameLine();
-        if (ImGui::Button("Voltar", ImVec2(100, 0))) {
+        BotaoCentralizado("Voltar", ImVec2(120, 40));
+        if (ImGui::IsItemClicked()) {
             estado_atual = AppState::INICIO;
         }
         break;
@@ -74,7 +84,8 @@ void layout(string& conta_atual, string& mensagem, double& valor,
         ImGui::InputText("Nome", nome, IM_ARRAYSIZE(nome));
         ImGui::InputText("Password", password, IM_ARRAYSIZE(password), ImGuiInputTextFlags_Password);
 
-        if (ImGui::Button("Entrar", ImVec2(200, 0))) {
+        BotaoCentralizado("Entrar", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             if (autenticarConta(nome, password)) {
                 conta_atual = nome;
                 estado_atual = AppState::MENU_CONTA;
@@ -83,8 +94,8 @@ void layout(string& conta_atual, string& mensagem, double& valor,
                 mensagem = "Credenciais incorretas.";
             }
         }
-        ImGui::SameLine();
-        if (ImGui::Button("Voltar", ImVec2(100, 0))) {
+        BotaoCentralizado("Voltar", ImVec2(120, 40));
+        if (ImGui::IsItemClicked()) {
             estado_atual = AppState::INICIO;
         }
         break;
@@ -93,19 +104,22 @@ void layout(string& conta_atual, string& mensagem, double& valor,
         ImGui::Text("Conta Ativa: %s", conta_atual.c_str());
         ImGui::InputDouble("Valor", &valor);
 
-        if (ImGui::Button("Depositar", ImVec2(120, 0))) {
+        BotaoCentralizado("Depositar", ImVec2(180, 40));
+        if (ImGui::IsItemClicked()) {
             depositar(conta_atual, valor);
             mensagem = "Deposito realizado.";
         }
-        ImGui::SameLine();
-        if (ImGui::Button("Levantar", ImVec2(120, 0))) {
+
+        BotaoCentralizado("Levantar", ImVec2(180, 40));
+        if (ImGui::IsItemClicked()) {
             if (levantar(conta_atual, valor))
                 mensagem = "Levantamento realizado.";
             else
                 mensagem = "Saldo insuficiente.";
         }
 
-        if (ImGui::Button("Mostrar Saldo", ImVec2(250, 0))) {
+        BotaoCentralizado("Mostrar Saldo", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             double saldo = obterSaldo(conta_atual);
             mensagem = "Saldo atual: " + to_string(saldo) + " bytes.";
         }
@@ -113,7 +127,8 @@ void layout(string& conta_atual, string& mensagem, double& valor,
         ImGui::InputText("Destinatario", destinatario, IM_ARRAYSIZE(destinatario));
         ImGui::InputDouble("Valor Transferencia", &valor_transferencia);
 
-        if (ImGui::Button("Transferir", ImVec2(250, 0))) {
+        BotaoCentralizado("Transferir", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             if (string(destinatario).empty()) {
                 mensagem = "Destinatario invalido.";
             } else {
@@ -122,7 +137,8 @@ void layout(string& conta_atual, string& mensagem, double& valor,
             }
         }
 
-        if (ImGui::Button("Terminar Sessao", ImVec2(250, 0))) {
+        BotaoCentralizado("Terminar Sessao", ImVec2(250, 40));
+        if (ImGui::IsItemClicked()) {
             conta_atual.clear();
             estado_atual = AppState::INICIO;
             mensagem = "Sessao encerrada.";

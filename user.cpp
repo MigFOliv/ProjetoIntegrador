@@ -21,6 +21,8 @@ void carregarContas();
 void criarConta(const string& nome);
 void depositar(const string& nome, double valor);
 double obterSaldo(const string& nome);
+void transferir(const string& remetente, const string& destinatario, double valor);
+
 
 int main() {
     carregarContas();
@@ -36,7 +38,6 @@ int main() {
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     ImGui::StyleColorsDark();
 
-    // Estilo customizado
     ImGuiStyle& style = ImGui::GetStyle();
     style.WindowRounding = 6.0f;
     style.FrameRounding = 4.0f;
@@ -65,13 +66,15 @@ int main() {
     string mensagem = "";
     string conta_atual = "";
 
+    char destinatario[128] = "";
+    double valor_transferencia = 0.0;
+
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        // Janela principal
         ImGui::Begin("Sistema Byte", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 
         ImGui::Text("Bem-vindo ao Sistema Byte");
@@ -79,14 +82,12 @@ int main() {
         ImGui::Separator();
         ImGui::Spacing();
 
-        // Janela interna
-        ImGui::BeginChild("content", ImVec2(400, 220), true, ImGuiWindowFlags_NoScrollbar);
+        ImGui::BeginChild("content", ImVec2(400, 300), true, ImGuiWindowFlags_NoScrollbar);
 
         if (conta_atual.empty()) {
             ImGui::Text("Login / Criar Conta");
             ImGui::Spacing();
             ImGui::InputText("Nome da Conta", nome, IM_ARRAYSIZE(nome));
-
             ImGui::Spacing();
 
             if (ImGui::Button("Criar Conta", ImVec2(180, 0))) {
@@ -114,7 +115,6 @@ int main() {
             ImGui::Text("Conta atual: %s", conta_atual.c_str());
             ImGui::Spacing();
             ImGui::InputDouble("Valor (Bytes)", &valor);
-
             ImGui::Spacing();
 
             if (ImGui::Button("Depositar", ImVec2(120, 0))) {
@@ -134,7 +134,21 @@ int main() {
             }
 
             ImGui::Spacing();
+            ImGui::Separator();
+            ImGui::Text("Transferência para outra conta");
+            ImGui::InputText("Destinatário", destinatario, IM_ARRAYSIZE(destinatario));
+            ImGui::InputDouble("Valor a Transferir", &valor_transferencia);
 
+            if (ImGui::Button("Transferir", ImVec2(250, 0))) {
+                if (string(destinatario).empty()) {
+                    mensagem = "Informe o destinatário.";
+                } else {
+                    transferir(conta_atual, string(destinatario), valor_transferencia);
+                    mensagem = "Transferência solicitada.";
+                }
+            }
+
+            ImGui::Spacing();
             if (ImGui::Button("Sair da Conta", ImVec2(250, 0))) {
                 conta_atual = "";
                 mensagem = "Conta encerrada.";
@@ -155,7 +169,6 @@ int main() {
 
         ImGui::End();
 
-        // Render
         ImGui::Render();
         int display_w, display_h;
         glfwGetFramebufferSize(window, &display_w, &display_h);
@@ -166,7 +179,6 @@ int main() {
         glfwSwapBuffers(window);
     }
 
-    // Cleanup
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
@@ -175,4 +187,3 @@ int main() {
 
     return 0;
 }
-

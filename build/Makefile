@@ -393,6 +393,30 @@ user.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/user.cpp.s
 .PHONY : user.cpp.s
 
+user_utils.o: user_utils.cpp.o
+.PHONY : user_utils.o
+
+# target to build an object file
+user_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/user_utils.cpp.o
+.PHONY : user_utils.cpp.o
+
+user_utils.i: user_utils.cpp.i
+.PHONY : user_utils.i
+
+# target to preprocess a source file
+user_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/user_utils.cpp.i
+.PHONY : user_utils.cpp.i
+
+user_utils.s: user_utils.cpp.s
+.PHONY : user_utils.s
+
+# target to generate assembly for a file
+user_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user.dir/build.make CMakeFiles/user.dir/user_utils.cpp.s
+.PHONY : user_utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -435,6 +459,9 @@ help:
 	@echo "... user.o"
 	@echo "... user.i"
 	@echo "... user.s"
+	@echo "... user_utils.o"
+	@echo "... user_utils.i"
+	@echo "... user_utils.s"
 .PHONY : help
 
 

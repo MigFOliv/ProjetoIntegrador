@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/user.dir/transactions.cpp.o.d"
   "CMakeFiles/user.dir/user.cpp.o"
   "CMakeFiles/user.dir/user.cpp.o.d"
+  "CMakeFiles/user.dir/user_utils.cpp.o"
+  "CMakeFiles/user.dir/user_utils.cpp.o.d"
   "user"
   "user.pdb"
 )

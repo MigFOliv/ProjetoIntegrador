@@ -83,10 +83,24 @@ CMakeFiles/user.dir/user.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/user.dir/user.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel-oliveira/Documents/Projeto_Integrador/user.cpp -o CMakeFiles/user.dir/user.cpp.s
 
+CMakeFiles/user.dir/user_utils.cpp.o: CMakeFiles/user.dir/flags.make
+CMakeFiles/user.dir/user_utils.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/user_utils.cpp
+CMakeFiles/user.dir/user_utils.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/user.dir/user_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/user_utils.cpp.o -MF CMakeFiles/user.dir/user_utils.cpp.o.d -o CMakeFiles/user.dir/user_utils.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/user_utils.cpp
+
+CMakeFiles/user.dir/user_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/user.dir/user_utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguel-oliveira/Documents/Projeto_Integrador/user_utils.cpp > CMakeFiles/user.dir/user_utils.cpp.i
+
+CMakeFiles/user.dir/user_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/user.dir/user_utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel-oliveira/Documents/Projeto_Integrador/user_utils.cpp -o CMakeFiles/user.dir/user_utils.cpp.s
+
 CMakeFiles/user.dir/account.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/account.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/account.cpp
 CMakeFiles/user.dir/account.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/user.dir/account.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/user.dir/account.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/account.cpp.o -MF CMakeFiles/user.dir/account.cpp.o.d -o CMakeFiles/user.dir/account.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/account.cpp
 
 CMakeFiles/user.dir/account.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/user.dir/account.cpp.s: cmake_force
 CMakeFiles/user.dir/accounts_data.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/accounts_data.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/accounts_data.cpp
 CMakeFiles/user.dir/accounts_data.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/user.dir/accounts_data.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/user.dir/accounts_data.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/accounts_data.cpp.o -MF CMakeFiles/user.dir/accounts_data.cpp.o.d -o CMakeFiles/user.dir/accounts_data.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/accounts_data.cpp
 
 CMakeFiles/user.dir/accounts_data.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/user.dir/accounts_data.cpp.s: cmake_force
 CMakeFiles/user.dir/transactions.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/transactions.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/transactions.cpp
 CMakeFiles/user.dir/transactions.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/user.dir/transactions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/user.dir/transactions.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/transactions.cpp.o -MF CMakeFiles/user.dir/transactions.cpp.o.d -o CMakeFiles/user.dir/transactions.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/transactions.cpp
 
 CMakeFiles/user.dir/transactions.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/user.dir/transactions.cpp.s: cmake_force
 CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/backends/imgui_impl_glfw.cpp
 CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/backends/imgui_impl_glfw.cpp
 
 CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/user.dir/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/backends/imgui_impl_opengl3.cpp
 CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/backends/imgui_impl_opengl3.cpp
 
 CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/user.dir/imgui/backends/imgui_impl_opengl3.cpp.s: cmake_force
 CMakeFiles/user.dir/imgui/imgui.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/imgui/imgui.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui.cpp
 CMakeFiles/user.dir/imgui/imgui.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/user.dir/imgui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/user.dir/imgui/imgui.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/imgui/imgui.cpp.o -MF CMakeFiles/user.dir/imgui/imgui.cpp.o.d -o CMakeFiles/user.dir/imgui/imgui.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui.cpp
 
 CMakeFiles/user.dir/imgui/imgui.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/user.dir/imgui/imgui.cpp.s: cmake_force
 CMakeFiles/user.dir/imgui/imgui_demo.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/imgui/imgui_demo.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_demo.cpp
 CMakeFiles/user.dir/imgui/imgui_demo.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/user.dir/imgui/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/user.dir/imgui/imgui_demo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/imgui/imgui_demo.cpp.o -MF CMakeFiles/user.dir/imgui/imgui_demo.cpp.o.d -o CMakeFiles/user.dir/imgui/imgui_demo.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_demo.cpp
 
 CMakeFiles/user.dir/imgui/imgui_demo.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/user.dir/imgui/imgui_demo.cpp.s: cmake_force
 CMakeFiles/user.dir/imgui/imgui_draw.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/imgui/imgui_draw.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_draw.cpp
 CMakeFiles/user.dir/imgui/imgui_draw.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/user.dir/imgui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/user.dir/imgui/imgui_draw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/imgui/imgui_draw.cpp.o -MF CMakeFiles/user.dir/imgui/imgui_draw.cpp.o.d -o CMakeFiles/user.dir/imgui/imgui_draw.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_draw.cpp
 
 CMakeFiles/user.dir/imgui/imgui_draw.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/user.dir/imgui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/user.dir/imgui/imgui_tables.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/imgui/imgui_tables.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_tables.cpp
 CMakeFiles/user.dir/imgui/imgui_tables.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/user.dir/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/user.dir/imgui/imgui_tables.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/imgui/imgui_tables.cpp.o -MF CMakeFiles/user.dir/imgui/imgui_tables.cpp.o.d -o CMakeFiles/user.dir/imgui/imgui_tables.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_tables.cpp
 
 CMakeFiles/user.dir/imgui/imgui_tables.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/user.dir/imgui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/user.dir/flags.make
 CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o: /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_widgets.cpp
 CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/user.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o -MF CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/user.dir/imgui/imgui_widgets.cpp.o -c /home/miguel-oliveira/Documents/Projeto_Integrador/imgui/imgui_widgets.cpp
 
 CMakeFiles/user.dir/imgui/imgui_widgets.cpp.i: cmake_force
@@ -226,6 +240,7 @@ CMakeFiles/user.dir/imgui/imgui_widgets.cpp.s: cmake_force
 # Object files for target user
 user_OBJECTS = \
 "CMakeFiles/user.dir/user.cpp.o" \
+"CMakeFiles/user.dir/user_utils.cpp.o" \
 "CMakeFiles/user.dir/account.cpp.o" \
 "CMakeFiles/user.dir/accounts_data.cpp.o" \
 "CMakeFiles/user.dir/transactions.cpp.o" \
@@ -241,6 +256,7 @@ user_OBJECTS = \
 user_EXTERNAL_OBJECTS =
 
 user: CMakeFiles/user.dir/user.cpp.o
+user: CMakeFiles/user.dir/user_utils.cpp.o
 user: CMakeFiles/user.dir/account.cpp.o
 user: CMakeFiles/user.dir/accounts_data.cpp.o
 user: CMakeFiles/user.dir/transactions.cpp.o
@@ -256,7 +272,7 @@ user: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 user: /usr/lib/x86_64-linux-gnu/libGLX.so
 user: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 user: CMakeFiles/user.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable user"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/miguel-oliveira/Documents/Projeto_Integrador/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable user"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/user.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

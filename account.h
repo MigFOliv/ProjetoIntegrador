@@ -11,7 +11,7 @@ private:
 
 public:
     Account();
-    Account(string nome);
+    explicit Account(const string& nome);
 
     void depositar(double valor);
     bool gastar(double valor);

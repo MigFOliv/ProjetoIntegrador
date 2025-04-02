@@ -4,7 +4,7 @@ using namespace std;
 
 Account::Account() : nome(""), saldo(0) {}
 
-Account::Account(string nome) : nome(nome), saldo(0) {}
+Account::Account(const string& nome) : nome(nome), saldo(0) {}
 
 void Account::depositar(double valor) {
     saldo += valor;

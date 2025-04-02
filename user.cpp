@@ -51,12 +51,25 @@ int main() {
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        ImGui::Begin("💸 Sistema Byte");
+        // Janela principal
+        ImGui::Begin("💸 Sistema Byte", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+
+        ImGui::Text("🧾 Bem-vindo ao Sistema Byte");
+        ImGui::Spacing();
+        ImGui::Separator();
+        ImGui::Spacing();
+
+        // Janela interna
+        ImGui::BeginChild("content", ImVec2(400, 220), true, ImGuiWindowFlags_NoScrollbar);
 
         if (conta_atual.empty()) {
-            ImGui::InputText("Nome da Conta", nome, IM_ARRAYSIZE(nome));
+            ImGui::Text("🔐 Login / Criar Conta");
+            ImGui::Spacing();
+            ImGui::InputText("👤 Nome da Conta", nome, IM_ARRAYSIZE(nome));
 
-            if (ImGui::Button("Criar Conta")) {
+            ImGui::Spacing();
+
+            if (ImGui::Button("🆕 Criar Conta", ImVec2(180, 0))) {
                 if (string(nome).empty()) {
                     mensagem = "❌ Nome inválido.";
                 } else {
@@ -68,7 +81,7 @@ int main() {
 
             ImGui::SameLine();
 
-            if (ImGui::Button("Acessar Conta")) {
+            if (ImGui::Button("➡️ Acessar Conta", ImVec2(180, 0))) {
                 if (accounts.find(nome) != accounts.end()) {
                     conta_atual = nome;
                     mensagem = "✅ Conta acessada.";
@@ -76,11 +89,15 @@ int main() {
                     mensagem = "❌ Conta não encontrada.";
                 }
             }
+
         } else {
             ImGui::Text("👤 Conta atual: %s", conta_atual.c_str());
-            ImGui::InputDouble("Valor (Bytes)", &valor);
+            ImGui::Spacing();
+            ImGui::InputDouble("💰 Valor (Bytes)", &valor);
 
-            if (ImGui::Button("Depositar")) {
+            ImGui::Spacing();
+
+            if (ImGui::Button("➕ Depositar", ImVec2(120, 0))) {
                 if (valor <= 0.0) {
                     mensagem = "❌ Valor inválido para depósito.";
                 } else {
@@ -91,28 +108,34 @@ int main() {
 
             ImGui::SameLine();
 
-            if (ImGui::Button("Exibir Saldo")) {
+            if (ImGui::Button("📊 Ver Saldo", ImVec2(120, 0))) {
                 double saldo = obterSaldo(conta_atual);
                 mensagem = "💰 Saldo: " + to_string(saldo) + " bytes.";
             }
 
-            ImGui::Separator();
+            ImGui::Spacing();
 
-            if (ImGui::Button("Sair da Conta")) {
+            if (ImGui::Button("↩️ Sair da Conta", ImVec2(250, 0))) {
                 conta_atual = "";
-                mensagem = "↩️ Saiu da conta.";
+                mensagem = "🔁 Conta encerrada.";
             }
         }
 
-        ImGui::Separator();
-        ImGui::Text("%s", mensagem.c_str());
+        ImGui::EndChild();
 
-        if (ImGui::Button("Fechar Programa")) {
+        ImGui::Spacing();
+        ImGui::Separator();
+        ImGui::Spacing();
+        ImGui::TextWrapped("%s", mensagem.c_str());
+
+        ImGui::Spacing();
+        if (ImGui::Button("❌ Fechar Programa", ImVec2(400, 0))) {
             glfwSetWindowShouldClose(window, true);
         }
 
         ImGui::End();
 
+        // Render
         ImGui::Render();
         int display_w, display_h;
         glfwGetFramebufferSize(window, &display_w, &display_h);
@@ -123,6 +146,7 @@ int main() {
         glfwSwapBuffers(window);
     }
 
+    // Cleanup
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();

@@ -27,7 +27,7 @@ int main() {
 
     if (!glfwInit()) return -1;
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Sistema Byte 💸", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Sistema Byte ", nullptr, nullptr);
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
 
@@ -52,9 +52,9 @@ int main() {
         ImGui::NewFrame();
 
         // Janela principal
-        ImGui::Begin("💸 Sistema Byte", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+        ImGui::Begin("Sistema Byte", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 
-        ImGui::Text("🧾 Bem-vindo ao Sistema Byte");
+        ImGui::Text("Bem-vindo ao Sistema Byte");
         ImGui::Spacing();
         ImGui::Separator();
         ImGui::Spacing();
@@ -63,61 +63,61 @@ int main() {
         ImGui::BeginChild("content", ImVec2(400, 220), true, ImGuiWindowFlags_NoScrollbar);
 
         if (conta_atual.empty()) {
-            ImGui::Text("🔐 Login / Criar Conta");
+            ImGui::Text("Login / Criar Conta");
             ImGui::Spacing();
-            ImGui::InputText("👤 Nome da Conta", nome, IM_ARRAYSIZE(nome));
+            ImGui::InputText("Nome da Conta", nome, IM_ARRAYSIZE(nome));
 
             ImGui::Spacing();
 
-            if (ImGui::Button("🆕 Criar Conta", ImVec2(180, 0))) {
+            if (ImGui::Button("Criar Conta", ImVec2(180, 0))) {
                 if (string(nome).empty()) {
-                    mensagem = "❌ Nome inválido.";
+                    mensagem = "Nome inválido.";
                 } else {
                     criarConta(string(nome));
                     conta_atual = nome;
-                    mensagem = "✅ Conta criada e acessada.";
+                    mensagem = "Conta criada e acessada.";
                 }
             }
 
             ImGui::SameLine();
 
-            if (ImGui::Button("➡️ Acessar Conta", ImVec2(180, 0))) {
+            if (ImGui::Button("Acessar Conta", ImVec2(180, 0))) {
                 if (accounts.find(nome) != accounts.end()) {
                     conta_atual = nome;
-                    mensagem = "✅ Conta acessada.";
+                    mensagem = "Conta acessada.";
                 } else {
-                    mensagem = "❌ Conta não encontrada.";
+                    mensagem = "Conta não encontrada.";
                 }
             }
 
         } else {
-            ImGui::Text("👤 Conta atual: %s", conta_atual.c_str());
+            ImGui::Text("Conta atual: %s", conta_atual.c_str());
             ImGui::Spacing();
-            ImGui::InputDouble("💰 Valor (Bytes)", &valor);
+            ImGui::InputDouble("Valor (Bytes)", &valor);
 
             ImGui::Spacing();
 
-            if (ImGui::Button("➕ Depositar", ImVec2(120, 0))) {
+            if (ImGui::Button("Depositar", ImVec2(120, 0))) {
                 if (valor <= 0.0) {
-                    mensagem = "❌ Valor inválido para depósito.";
+                    mensagem = "Valor inválido para depósito.";
                 } else {
                     depositar(conta_atual, valor);
-                    mensagem = "✅ Depósito realizado.";
+                    mensagem = "Depósito realizado.";
                 }
             }
 
             ImGui::SameLine();
 
-            if (ImGui::Button("📊 Ver Saldo", ImVec2(120, 0))) {
+            if (ImGui::Button("Ver Saldo", ImVec2(120, 0))) {
                 double saldo = obterSaldo(conta_atual);
-                mensagem = "💰 Saldo: " + to_string(saldo) + " bytes.";
+                mensagem = "Saldo: " + to_string(saldo) + " bytes.";
             }
 
             ImGui::Spacing();
 
-            if (ImGui::Button("↩️ Sair da Conta", ImVec2(250, 0))) {
+            if (ImGui::Button("↩Sair da Conta", ImVec2(250, 0))) {
                 conta_atual = "";
-                mensagem = "🔁 Conta encerrada.";
+                mensagem = "Conta encerrada.";
             }
         }
 
@@ -129,7 +129,7 @@ int main() {
         ImGui::TextWrapped("%s", mensagem.c_str());
 
         ImGui::Spacing();
-        if (ImGui::Button("❌ Fechar Programa", ImVec2(400, 0))) {
+        if (ImGui::Button("Fechar Programa", ImVec2(400, 0))) {
             glfwSetWindowShouldClose(window, true);
         }
 
